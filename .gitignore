@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.env
+.311env/
+classification_model.pkl
+regression_model.pkl
+.vscode
+.pytest_cache/
+node_modules/
+spec/support/
