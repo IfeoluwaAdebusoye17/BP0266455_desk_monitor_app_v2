@@ -1,0 +1,8 @@
+Flask==3.1.1
+python-dotenv
+flask_sqlalchemy
+flask_socketio
+psycopg2
+requests
+WMI
+pytest Flask-Testing
