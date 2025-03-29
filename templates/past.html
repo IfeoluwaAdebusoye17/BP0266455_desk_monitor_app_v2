@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         
+        <meta name="viewport" content="initial-scale=1" width="device-width">
+        <title>Past Occupancy and IEQ</title>
+        <link rel="stylesheet" href="../static/css/app.css">
+    </head>
+    <body>
+        <a href="{{  url_for('index') }}">Home</a>
+
+        <h1>Past Occupancy and IEQ</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Desk ID</th>
+                    <th>Status</th>
+                    <th>Last Updated</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Light</th>
+                    <th>Noise</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.desk_id }}</td>
+                    <td>{{ record.status }}</td>
+                    <td>{{ record.last_updated }}</td>
+                    <td>{{ record.temperature }}</td>
+                    <td>{{ record.humidity }}</td>
+                    <td>{{ record.light }}</td>
+                    <td>{{ record.noise }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+
+    </body>
+</html>
