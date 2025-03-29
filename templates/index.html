@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1" width="device-width">
+        <title>Desk Usage Dashboard</title>
+        <link rel="stylesheet" href="../static/css/app.css">
+    </head>
+    <body>
+        <a href="{{  url_for('past') }}">Past Office Data</a>
+        <a href="{{  url_for('predicted') }}">Predicted Office Data</a>
+
+        <h1>Live Occupancy and IEQ</h1>
+
+        <!-- Display desks -->
+        <div id="desks-container"></div>
+
+        
+        <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+        <script src="../static/js/app.js"></script>
+
+    </body>
+</html>
