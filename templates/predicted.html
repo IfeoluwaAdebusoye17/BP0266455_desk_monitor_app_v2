@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1" width="device-width">
+        <title>Future Predicted Occupancy and IEQ Data</title>
+        <link rel="stylesheet" href="../static/css/app.css">
+    </head>
+    <body>
+
+        <a href="{{  url_for('index') }}">Home</a>
+        <h1>Future Predicted Occupancy and IEQ Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Zone</th>
+                    <th>Desk</th>
+                    <th>Hour</th>
+                    <th>DayOfWeek</th>
+                    <th>DayOfMonth</th>
+                    <th>Occupied</th>
+                    <th>Predicted_Temperature</th>
+                    <th>Predicted_Humidity</th>
+                    <th>Predicted_Light</th>
+                    <th>Predicted_Noise</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.Zone }}</td>
+                    <td>{{ record.Desk }}</td>
+                    <td>{{ record.Hour }}</td>
+                    <td>{{ record.DayOfWeek }}</td>
+                    <td>{{ record.DayOfMonth }}</td>
+                    <td>{{ record.Occupied }}</td>
+                    <td>{{ record.Predicted_Temperature }}</td>
+                    <td>{{ record.Predicted_Humidity }}</td>
+                    <td>{{ record.Predicted_Light }}</td>
+                    <td>{{ record.Predicted_Noise }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table>
+
+    </body>
+</html>
